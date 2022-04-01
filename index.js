@@ -13,16 +13,12 @@ const getUser = (username) => new Promise((resolve, reject) => {
 });
 
 (async () => {
-    try {
-        const username = readline.question('Username Github : ')
+    const username = readline.question('Username Github : ')
         
-        const users = await getUser(username)
-        if(users.login === username){
-          console.log(`Username : ${users.login}\nName : ${users.name}\nFollowers : ${users.followers}\nFollowing : ${users.following}`)
-        } else {
-          console.log('User not found')
-        }
-    } catch (e) {
-        console.log(e)
+    const users = await getUser(username)
+    if(users.login === username){
+      console.log(`Username : ${users.login}\nName : ${users.name}\nFollowers : ${users.followers}\nFollowing : ${users.following}`)
+    } else {
+      console.log('User not found')
     }
 })();
