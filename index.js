@@ -1,6 +1,3 @@
-// import fetch from 'node-fetch';
-// import readline from 'readline-sync';
-
 const fetch = require('node-fetch');
 const readline = require("readline-sync");
 
